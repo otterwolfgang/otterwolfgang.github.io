@@ -1,0 +1,127 @@
+// Header
+header.header-main
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 400px
+  background:
+    size: cover
+    position: center center
+    repeat: no-repeat
+  .overlay-light
+    position: absolute
+    z-index: 2
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: $white
+    opacity: 0.4
+  .home-title
+    position: relative
+    z-index: 3
+    text-align: center
+    padding-top: 50px
+    h1
+      font-size: 3.125em
+      font-weight: 400
+      line-height: 1.2em
+      padding: 0 20px 5px 20px
+    h3
+      font-size: 1.25em
+      font-weight: 300
+      line-height: 1.2em
+
+// About
+.about
+  max-width: 600px
+  margin: 120px auto 100px auto
+  padding: 0 20px
+  h2
+    padding-bottom: 17px
+    color: $secondary
+  p
+    a
+      font-weight: 400
+      color: $secondary
+      transition: all 0.15s ease-in-out
+      &:hover
+        color: $primary
+
+// Explanation
+h2.explanation
+  text-align: center
+  padding-top: 70px
+.explanation-content-wrapper
+  margin: 0 auto 100px auto
+  max-width: 800px
+  padding: 60px 20px 0 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  .reason-wrap
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    .reason
+      max-width: 465px
+      min-height: 200px
+      margin: 20px 0
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      .reason-img
+        background: $primary
+        height: 200px
+        width: 200px
+        flex: 0 0 200px
+          size: cover
+          position: center center
+          repeat: no-repeat
+      .reason-img-0
+        background:
+          image: url("../images/feinripp_logo00.png")
+          size: cover
+      .reason-img-1
+        background:
+          image: url("../images/feinripp_logo01.png")
+          size: cover
+      .reason-text
+        min-height: 150px
+        height: 100%
+        width: 100%
+        margin-left: 15px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding: 5px
+        h5
+          color: $secondary
+        p
+          line-height: 1.2em
+  .reason-wrap-reversed
+    justify-content: flex-end
+    .reason
+      flex-direction: row-reverse
+      .reason-text
+        text-align: right
+        margin-right: 15px
+        margin-left: 0
+  @media screen and(max-width: 465px)
+    .reason-wrap
+      .reason
+        flex-direction: column
+        min-height: 199px
+        .reason-text
+          margin: 6px 0 0 0
+    .reason-wrap-reversed
+      .reason
+        align-items: flex-end
+        flex-direction: column
+        min-height: 189px
+        .reason-text
+          margin: 6px 0 0 0

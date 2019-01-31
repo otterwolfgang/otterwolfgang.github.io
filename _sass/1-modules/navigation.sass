@@ -1,0 +1,139 @@
+nav.nav-wrap
+  transition: all 0.3s ease-in
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+  max-width: 1000px
+  display: flex
+  justify-content: space-between
+  margin: auto
+  padding: 40px
+  @media screen and (max-width: 600px)
+    padding: 35px 20px
+  a.nav-logo
+    height: 50px
+    svg
+      height: 100%
+      width: auto
+  ul.navigation
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 600px)
+      display: none
+    li
+      display: block
+      padding-right: 30px
+      a
+        color: $neutral
+        transition: all 0.15s ease-in
+        font-size: 1em
+      a:hover
+        color: lighten($neutral, 60%)
+    li:last-of-type
+      padding-right: 0
+
+// Toggled navigation
+.nav-toggle-open-wrapper, .nav-toggle-close-wrapper
+  position: relative
+  height: 50px
+  width: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  overflow: visible
+  z-index: 200
+  svg
+    width: 24px
+    height: auto
+.toggled-nav-wrapper
+  transition: all 0.2s ease-in-out
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 201
+  width: 300px
+  height: 100%
+  padding: 35px 20px 35px 0
+  background: $white
+  transform: translateX(300px)
+  .internal-nav-links-wrapper, .external-nav-links-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: right
+  hr
+    width: 80%
+    margin: 30px 0 60px 0
+    border-width: 2px
+    border-color: $primary
+  .internal-nav-links-wrapper
+    margin-top: 50px
+    height: 192px
+    a.internal-link-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      align-items: center
+  .external-nav-links-wrapper
+    height: 122px
+    a.external-link-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      align-items: center
+.internal-link-icon, .external-link-icon
+  height: 30px
+  width: 30px
+  margin-left: 20px
+  background:
+    size: contain
+    position: center center
+    repeat: no-repeat
+.internal-link-icon-home
+  background-image: url("../images/icons/knife_48.png")
+.internal-link-icon-contact
+  background-image: url("../images/icons/octopus_48.png")
+.internal-link-icon-blog
+  background-image: url("../images/icons/vinyl_48.png")
+.external-link-icon-instagram
+  background-image: url("../images/icons/instagram_48.svg")
+.nav-toggle-body-overlay
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s
+  display: block
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 200
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0.7)
+  opacity: 0
+  transform: translateX(100%)
+html.nav-open
+  body
+    overflow: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  .nav-toggle-body-overlay
+    transition: opacity 0.2s ease-in-out, transform 0s
+    opacity: 1
+    transform: translateX(0)
+  .toggled-nav-wrapper
+    transform: translateX(0)
+@media screen and(min-width: 600px)
+  .nav-toggle-open-wrapper, .nav-toggle-close-wrapper, .toggled-nav-wrapper, .nav-toggle-body-overlay
+    display: none
