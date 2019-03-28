@@ -22,8 +22,8 @@ title: wolfgang otter
 email: otter.wolfgang@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Analytics & Product Development
-baseurl: /home # the subpath of your site, e.g. /blog
-url: https://wolfgangotter.org # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: / # the subpath of your site, e.g. /blog
+url: https://wolfgangotter.com # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  https://github.com/otterwolfgang
 instagram_username: https://instagram.com
 medium_username: https://medium.com
