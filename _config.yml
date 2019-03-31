@@ -22,8 +22,16 @@ title: wolfgang otter
 email: otter.wolfgang@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Analytics & Product Development
-baseurl: / # the subpath of your site, e.g. /blog
-url: https://wolfgangotter.com # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: / # the subpath of your site, e.g. /blog
+url: http://wolfgangotter.com # the base hostname & protocol for your site, e.g. http://example.com
+author: Wolfgang Otter
+logo: /assets/images/wolfgangotter_logo.png
+social:
+  name: Wolfgang Otter
+  links:
+    - https://github.com/otterwolfgang
+#    - https://medium.com
+
 github_username:  https://github.com/otterwolfgang
 instagram_username: https://instagram.com
 medium_username: https://medium.com
@@ -37,6 +45,9 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-autoprefixer
+  - jekyll-seo-tag
+  - jekyll-sitemap
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
