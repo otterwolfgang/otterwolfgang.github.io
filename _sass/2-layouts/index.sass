@@ -42,90 +42,14 @@ header.header-main
   margin: 120px auto 100px auto
   padding: 0 20px
   h2
-    padding-bottom: 17px
+    padding-bottom: 30px
     color: $secondary
   p
+    line-height: 1.6em
+    margin: auto auto 20px auto
     a
       font-weight: 400
       color: $secondary
       transition: all 0.15s ease-in-out
       &:hover
         color: $primary
-
-// Explanation
-h2.explanation
-  text-align: center
-  padding-top: 70px
-.explanation-content-wrapper
-  margin: 0 auto 100px auto
-  max-width: 800px
-  padding: 60px 20px 0 20px
-  display: flex
-  flex-direction: column
-  align-items: center
-  .reason-wrap
-    width: 100%
-    display: flex
-    justify-content: flex-start
-    .reason
-      max-width: 465px
-      min-height: 200px
-      margin: 20px 0
-      display: flex
-      flex-direction: row
-      justify-content: space-around
-      .reason-img
-        background: $primary
-        height: 200px
-        width: 200px
-        flex: 0 0 200px
-          size: cover
-          position: center center
-          repeat: no-repeat
-      .reason-img-0
-        background:
-          image: url("../images/bars.png")
-          size: cover
-      .reason-img-1
-        background:
-          image: url("../images/pie.png")
-          size: cover
-      .reason-img-2
-        background:
-          image: url("../images/curve.png")
-          size: cover
-      .reason-text
-        min-height: 150px
-        height: 100%
-        width: 100%
-        margin-left: 15px
-        display: flex
-        flex-direction: column
-        justify-content: space-around
-        padding: 5px
-        h5
-          color: $secondary
-        p
-          line-height: 1.2em
-  .reason-wrap-reversed
-    justify-content: flex-end
-    .reason
-      flex-direction: row-reverse
-      .reason-text
-        text-align: right
-        margin-right: 15px
-        margin-left: 0
-  @media screen and(max-width: 465px)
-    .reason-wrap
-      .reason
-        flex-direction: column
-        min-height: 199px
-        .reason-text
-          margin: 6px 0 0 0
-    .reason-wrap-reversed
-      .reason
-        align-items: flex-end
-        flex-direction: column
-        min-height: 189px
-        .reason-text
-          margin: 6px 0 0 0
